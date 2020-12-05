@@ -73,7 +73,7 @@ const PinName digitalPin[] = {
   
   PD_0,  //D48
   PD_1,  //D50
-  PD_2,  //D51
+  PD_2   //D51
   
 };
 
@@ -95,7 +95,7 @@ const uint32_t analogInputPin[] = {
   35, //A13 , PC3
   36, //A14 , PC4
   37, //A15 , PC5
-}
+};
 
 #ifdef __cplusplus
 }
@@ -118,7 +118,7 @@ extern "C" {
   *            APB2 Prescaler                 = 1
   *            PLL_Source                     = HSE
   *            PLL_Mul                        = 9
-  *            Flash Latency(WS)              = 2
+  *            Flash Latency(WS)              = 1
   *            ADC Prescaler                  = 2
   * @param  None
   * @retval None
@@ -154,9 +154,8 @@ WEAK void SystemClock_Config(void)
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
-  }
+		}
 }
-
 #ifdef __cplusplus
 }
 #endif
