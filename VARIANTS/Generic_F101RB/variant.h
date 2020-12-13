@@ -110,8 +110,8 @@ extern "C" {
 
 // Default pin used for 'Serial' instance (ex: ST-Link)
 // Mandatory for Firmata
-#define PIN_SERIAL_RX           PA9
-#define PIN_SERIAL_TX           PA10
+#define PIN_SERIAL_RX           PA10
+#define PIN_SERIAL_TX           PA9
 
 
 #ifdef __cplusplus
