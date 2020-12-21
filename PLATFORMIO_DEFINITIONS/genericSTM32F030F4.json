@@ -1,0 +1,37 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32F031x6 -DSTM32F0xx",
+    "f_cpu": "48000000L",
+    "mcu": "stm32f030F4",
+    "product_line": "STM32F030x6",
+    "variant": "Generic_F030F4"
+  },
+  "debug": {
+    "jlink_device": "STM32F030F4",
+    "openocd_target": "stm32f1x",
+    "svd_path": "STM32F103xx.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "stm32cube",
+    "libopencm3"
+  ],
+  "name": "STM32F030F4 (4k RAM. 16k Flash)",
+  "upload": {
+    "maximum_ram_size": 4096,
+    "maximum_size": 16384,
+    "protocol": "stlink",
+    "protocols": [
+      "blackmagic",
+      "dfu",
+      "jlink",
+      "serial",
+      "stlink"
+    ]
+  },
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f030f4.html",
+  "vendor": "Generic"
+}

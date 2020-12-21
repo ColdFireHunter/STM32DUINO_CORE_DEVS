@@ -2,7 +2,7 @@
   "build": {
     "core": "stm32",
     "cpu": "cortex-m3",
-    "extra_flags": "-DSTM32F101xB -DSTM32F1",
+    "extra_flags": "-DSTM32F101xB -DSTM32F1xx",
     "f_cpu": "36000000L",
     "mcu": "stm32f101RB",
     "product_line": "STM32F101xB",
@@ -23,7 +23,7 @@
   "upload": {
     "maximum_ram_size": 16384,
     "maximum_size": 131072,
-    "protocol": "serial",
+    "protocol": "stlink",
     "protocols": [
       "blackmagic",
       "dfu",
