@@ -1,0 +1,37 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32L031xx ",
+    "f_cpu": "32000000L",
+    "mcu": "stm32L031F6",
+    "product_line": "STM32L031xx",
+    "variant": "Generic_L031F6"
+  },
+  "debug": {
+    "jlink_device": "STM32L031F6",
+    "openocd_target": "stm32f1x",
+    "svd_path": "STM32F103xx.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "stm32cube",
+    "libopencm3"
+  ],
+  "name": "STM32L031F6 (8k RAM. 32k Flash)",
+  "upload": {
+    "maximum_ram_size": 8192,
+    "maximum_size": 32768,
+    "protocol": "stlink",
+    "protocols": [
+      "blackmagic",
+      "dfu",
+      "jlink",
+      "serial",
+      "stlink"
+    ]
+  },
+  "url": "https://www.st.com/content/st_com/en/products/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus/stm32-mainstream-mcus/stm32f1-series/stm32f101/stm32f101rb.html",
+  "vendor": "Generic"
+}

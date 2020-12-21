@@ -1,0 +1,7 @@
+# Generic STM32L031F6 boards
+GenL0.menu.pnum.Generic_L031F6=Generic L031F6
+GenL0.menu.pnum.Generic_L031F6.upload.maximum_size=32768
+GenL0.menu.pnum.Generic_L031F6.upload.maximum_data_size=8192
+GenL0.menu.pnum.Generic_L031F6.build.board=Generic_L031F6
+GenL0.menu.pnum.Generic_L031F6.build.product_line=STM32L031xx
+GenL0.menu.pnum.Generic_L031F6.build.variant=Generic_L031F66
