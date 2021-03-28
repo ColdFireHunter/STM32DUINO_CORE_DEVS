@@ -1,0 +1,48 @@
+################################################################################
+# Generic F2
+
+GenF2.name=Generic STM32F2 Series
+GenF2.build.core=arduino
+GenF2.build.board=GenF3
+GenF2.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
+GenF2.build.mcu=cortex-m3
+GenF2.build.flags.fp=-mfpu=fpv4-sp-d16 -mfloat-abi=hard
+GenF2.build.series=STM32F2xx
+GenF2.build.cmsis_lib_gcc=arm_cortexM3lf_math
+
+# STM32F207ZE board
+GenF2.menu.pnum.STM32F207ZE=STM32F207ZE
+GenF2.menu.pnum.STM32F207ZE.upload.maximum_size=524288
+GenF2.menu.pnum.STM32F207ZE.upload.maximum_data_size=131072
+GenF2.menu.pnum.STM32F207ZE.build.board=Generic_F207ZE
+GenF2.menu.pnum.STM32F207ZE.build.product_line=STM32F207xx
+GenF2.menu.pnum.STM32F207ZE.build.variant=Generic_F207ZE
+
+# Upload menu
+GenF2.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+GenF2.menu.upload_method.swdMethod.upload.protocol=0
+GenF2.menu.upload_method.swdMethod.upload.options=-g
+GenF2.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+GenF2.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
+GenF2.menu.upload_method.serialMethod.upload.protocol=1
+GenF2.menu.upload_method.serialMethod.upload.options={serial.port.file} -s
+GenF2.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
+
+GenF2.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+GenF2.menu.upload_method.dfuMethod.upload.protocol=2
+GenF2.menu.upload_method.dfuMethod.upload.options=-g
+GenF2.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+GenF2.menu.upload_method.bmpMethod=BMP (Black Magic Probe)
+GenF2.menu.upload_method.bmpMethod.upload.protocol=gdb_bmp
+GenF2.menu.upload_method.bmpMethod.upload.tool=bmp_upload
+
+GenF2.menu.upload_method.hidMethod=HID Bootloader 2.2
+GenF2.menu.upload_method.hidMethod.upload.protocol=hid22
+GenF2.menu.upload_method.hidMethod.upload.tool=hid_upload
+GenF2.menu.upload_method.hidMethod.build.flash_offset=0x4000
+GenF2.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}
+
+
+################################################################################
