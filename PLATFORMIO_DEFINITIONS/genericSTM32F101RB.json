@@ -6,12 +6,12 @@
     "f_cpu": "36000000L",
     "mcu": "stm32f101RB",
     "product_line": "STM32F101xB",
-    "variant": "Generic_F101RB"
+    "variant": "STM32F1xx/F101R(8-B)T"
   },
   "debug": {
     "jlink_device": "STM32F101RB",
     "openocd_target": "stm32f1x",
-    "svd_path": "STM32F103xx.svd"
+    "svd_path": 'STM32F103xx.svd'
   },
   "frameworks": [
     "arduino",

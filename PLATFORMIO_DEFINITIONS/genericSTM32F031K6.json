@@ -2,16 +2,16 @@
   "build": {
     "core": "stm32",
     "cpu": "cortex-m0",
-    "extra_flags": "-DSTM32F030x4 -DSTM32F0xx",
+    "extra_flags": "-DSTM32F031x6 -DSTM32F0xx",
     "f_cpu": "48000000L",
-    "mcu": "stm32f030F4",
-    "product_line": "STM32F030x4",
-    "variant": "Generic_F030F4"
+    "mcu": "stm32f031k6",
+    "product_line": "STM32F031x6",
+    "variant": "Generic_F031K6"
   },
   "debug": {
-    "jlink_device": "STM32F030F4",
-    "openocd_target": "stm32f1x",
-    "svd_path": "STM32F103xx.svd"
+    "jlink_device": "STM32F031K6",
+    "openocd_target": "stm32f0x",
+    "svd_path": "STM32F031xx.svd"
   },
   "frameworks": [
     "arduino",
@@ -19,10 +19,10 @@
     "stm32cube",
     "libopencm3"
   ],
-  "name": "STM32F030F4 (4k RAM. 16k Flash)",
+  "name": "STM32F031K6 (4k RAM. 32k Flash)",
   "upload": {
     "maximum_ram_size": 4096,
-    "maximum_size": 16384,
+    "maximum_size": 32768,
     "protocol": "stlink",
     "protocols": [
       "blackmagic",
