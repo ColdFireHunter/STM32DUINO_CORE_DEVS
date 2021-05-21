@@ -18,41 +18,49 @@ extern "C" {
 #endif
 
 
+// Digital PinName array
 const PinName digitalPin[] = {
-  //PX_n, //Dx
-  PA_0,  //D0
-  PA_1,  //D1
-  PA_2,  //D2
-  PA_3,  //D3
-  PA_4,  //D4
-  PA_5,  //D5
-  PA_6,  //D6
-  PA_7,  //D7
-  PA_9,  //D8
-  PA_10, //D9
-  PA_13, //D10
-  PA_14, //D11
-  
-  PB_1,  //D12
-  
-  PF_0,  //D13
-  PF_1,  //D14
-  
-  
+  PA_0,   // D1/A0
+  PA_1,   // D2/A1
+  PA_2,   // D3/A2
+  PA_3,   // D4/A3
+  PA_4,   // D5/A4
+  PA_5,   // D6/A5
+  PA_6,   // D7/A6
+  PA_7,   // D8/A7
+  PA_8,   // D9
+  PA_9,   // D10
+  PA_10,  // D11
+  PA_11,  // D12
+  PA_12,  // D13
+  PA_13,  // D14
+  PA_14,  // D15
+  PA_15,  // D16
+  PB_0,   // D17/A8
+  PB_1,   // D18/A9
+  PB_3,   // D19
+  PB_4,   // D20
+  PB_5,   // D21
+  PB_6,   // D22
+  PB_7,   // D23
+  PF_0,   // D24
+  PF_1    // D25
 };
 
-
+// Analog (Ax) pin number array
 const uint32_t analogInputPin[] = {
-  0,  //A0  , PA0
-  1,  //A1  , PA1
-  2,  //A2  , PA2
-  3,  //A3  , PA3
-  4,  //A4  , PA4
-  5,  //A5  , PA5
-  6,  //A6  , PA6
-  7,  //A7  , PA7
-  
+  0,  // A0,  PA0
+  1,  // A1,  PA1
+  2,  // A2,  PA2
+  3,  // A3,  PA3
+  4,  // A4,  PA4
+  5,  // A5,  PA5
+  6,  // A6,  PA6
+  7,  // A7,  PA7
+  16, // A8,  PB0
+  17  // A9,  PB1
 };
+
 
 #ifdef __cplusplus
 }
@@ -67,20 +75,19 @@ extern "C" {
 /**
   * @brief  System Clock Configuration
   *         The system Clock is configured as follow :
-  *            System Clock source            = PLL (HSI)
-  *            SYSCLK(Hz)                     = 48000000
-  *            HCLK(Hz)                       = 48000000
+  *            System Clock source            = PLLCLK
+  *            SYSCLK(Hz)                     = 32000000
+  *            HCLK(Hz)                       = 32000000
   *            AHB Prescaler                  = 1
   *            APB1 Prescaler                 = 1
-  *            APB2 Prescaler                 = 1
-  *            PLL_Source                     = HSI
+  *            PLL_Source                     = HSI/2
   *            PLL_Mul                        = 12
+  *            PLL_Div                        = 2
   *            Flash Latency(WS)              = 1
-  *            ADC Prescaler                  = ?
   * @param  None
   * @retval None
   */
-void SystemClock_Config(void)
+WEAK void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
@@ -93,7 +100,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL12;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL8;
   RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {

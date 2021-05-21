@@ -1,0 +1,7 @@
+# Generic STM32F030K6 boards
+GenF0.menu.pnum.Generic_F030K6=Generic F031K6
+GenF0.menu.pnum.Generic_F030K6.upload.maximum_size=32768
+GenF0.menu.pnum.Generic_F030K6.upload.maximum_data_size=4096
+GenF0.menu.pnum.Generic_F030K6.build.board=Generic_F030K6
+GenF0.menu.pnum.Generic_F030K6.build.product_line=STM32F030x6
+GenF0.menu.pnum.Generic_F030K6.build.variant=Generic_F030K6

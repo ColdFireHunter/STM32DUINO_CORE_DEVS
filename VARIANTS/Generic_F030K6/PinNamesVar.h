@@ -23,3 +23,6 @@
 #ifdef PWR_WAKEUP_PIN8
   SYS_WKUP8 = NC,
 #endif
+
+/* No USB */
+/* No USB */
