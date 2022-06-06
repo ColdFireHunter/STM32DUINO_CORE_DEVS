@@ -1,0 +1,37 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32G031xx -DSTM32G0xx",
+    "f_cpu": "64000000L",
+    "mcu": "stm32G031G8U6",
+    "product_line": "STM32G031xx",
+    "variant": "STM32G0xx/G031G(4-6-8)U_G041G(6-8)U"
+  },
+  "debug": {
+    "jlink_device": "STM32G031G8U6",
+    "openocd_target": "stm32g0x",
+    "svd_path": "STM32G031xx.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "stm32cube",
+    "libopencm3"
+  ],
+  "name": "STM32G031G8U6 (8k RAM. 64k Flash)",
+  "upload": {
+    "maximum_ram_size": 8192,
+    "maximum_size": 65536,
+    "protocol": "stlink",
+    "protocols": [
+      "blackmagic",
+      "dfu",
+      "jlink",
+      "serial",
+      "stlink"
+    ]
+  },
+  "url": "https://datasheet.lcsc.com/lcsc/1912111437_STMicroelectronics-STM32G031G8U6_C432210.pdf",
+  "vendor": "Generic"
+}
