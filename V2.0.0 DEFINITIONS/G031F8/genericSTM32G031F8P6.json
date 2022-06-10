@@ -6,7 +6,7 @@
     "f_cpu": "64000000L",
     "mcu": "stm32G031G8U6",
     "product_line": "STM32G031xx",
-    "variant": "G031F(4-6-8)P_G031Y8Y_G041F(6-8)P_G041Y8Y"
+    "variant": "STM32G0xx/G031F(4-6-8)P_G031Y8Y_G041F(6-8)P_G041Y8Y"
   },
   "debug": {
     "jlink_device": "STM32G031F8P6",
