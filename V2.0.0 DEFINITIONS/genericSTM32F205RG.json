@@ -1,0 +1,39 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m3",
+    "extra_flags": "-DSTM32F2xx -DSTM32F205xx",
+    "f_cpu": "120000000L",
+    "mcu": "stm32f205rgt6",
+    "product_line": "STM32F205xx",
+    "variant": "STM32F2xx/F205RE(T-Y)_F205R(B-C-F)T_F205RG(E-T-Y)_F215R(E-G)T"
+  },
+  "debug": {
+    "jlink_device": "STM32F205RG",
+    "openocd_target": "stm32f2x",
+    "svd_path": "STM32F205.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "libopencm3",
+    "stm32cube"
+  ],
+  "name": "STM32F205RG (128k RAM. 1M Flash)",
+  "upload": {
+    "disable_flushing": false,
+    "maximum_ram_size": 131072,
+    "maximum_size": 1049536 ,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic",
+      "serial",
+      "dfu"
+    ]
+  },
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f205rg.html",
+  "vendor": "Generic"
+}

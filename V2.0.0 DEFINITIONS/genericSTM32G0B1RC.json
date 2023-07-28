@@ -1,0 +1,45 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0plus",
+    "extra_flags": "-DSTM32G0xx -DSTM32G0B1xx",
+    "f_cpu": "64000000L",
+	"framework_extra_flags": {
+      "arduino": "-D__CORTEX_SC=0"
+    },
+    "mcu": "stm32g0b1rct6",
+    "product_line": "STM32G0B1xx",
+    "variant": "STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T"
+  },
+  "debug": {
+    "jlink_device": "STM32G0B1RC",
+    "openocd_target": "stm32g0x",
+    "svd_path": "STM32G0B1.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "libopencm3",
+    "stm32cube"
+  ],
+  "name": "STM32G0B1RC (144k RAM. 256k Flash)",
+  "upload": {
+    "disable_flushing": false,
+    "maximum_ram_size": 147456,
+    "maximum_size": 262144 ,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic",
+      "serial",
+      "dfu"
+    ],
+    "require_upload_port": true,
+    "use_1200bps_touch": false,
+    "wait_for_upload_port": false
+  },
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g0b1rc.html",
+  "vendor": "Generic"
+}
