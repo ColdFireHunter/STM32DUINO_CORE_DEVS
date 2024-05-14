@@ -9,12 +9,12 @@
     },
     "mcu": "stm32g0b1ret6",
     "product_line": "STM32G0B1xx",
-    "variant": "STM32G0xx/G0B1R(B-C-E)T_G0C1R(C-E)T"
+    "variant": "STM32G0xx/G0B1RET"
   },
   "debug": {
-    "jlink_device": "STM32G0B1RE",
+    "jlink_device": "STM32G0B0RE",
     "openocd_target": "stm32g0x",
-    "svd_path": "STM32G0B1.svd"
+    "svd_path": "STM32G0B0.svd"
   },
   "frameworks": [
     "arduino",
@@ -22,7 +22,7 @@
     "libopencm3",
     "stm32cube"
   ],
-  "name": "STM32G0B1RE (144k RAM. 512k Flash)",
+  "name": "STM32G0B0RE (144k RAM. 512k Flash)",
   "upload": {
     "disable_flushing": false,
     "maximum_ram_size": 147456,
@@ -35,11 +35,8 @@
       "blackmagic",
       "serial",
       "dfu"
-    ],
-    "require_upload_port": true,
-    "use_1200bps_touch": false,
-    "wait_for_upload_port": false
+    ]
   },
-  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g0b1re.html",
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g0b0re.html",
   "vendor": "Generic"
 }
