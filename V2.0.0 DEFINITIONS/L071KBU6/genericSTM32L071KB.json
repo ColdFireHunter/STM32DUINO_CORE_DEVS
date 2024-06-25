@@ -1,0 +1,39 @@
+{
+  "build": {
+	"core": "stm32",
+    "cpu": "cortex-m0plus",
+    "extra_flags": "-DSTM32L071xx -DSTM32L0xx",
+    "f_cpu": "32000000L",
+    "mcu": "stm32L071KBU6",
+    "product_line": "STM32L071xx",
+    "variant": "STM32L0xx/L071K(8-B-Z)U_L081KZU"
+  },
+  "debug": {
+    "jlink_device": "STM32L071KBU6",
+    "openocd_target": "stm32l0",
+    "svd_path": "STM32L071x.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "mbed",
+    "stm32cube",
+    "libopencm3",
+    "zephyr"
+  ],
+  "name": "STM32L071KBU6 (20K RAM 128K FLASH)",
+  "upload": {
+    "maximum_ram_size": 20480,
+    "maximum_size": 131072,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic",
+      "mbed"
+    ]
+  },
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32l071kb.html",
+  "vendor": "ST"
+}
