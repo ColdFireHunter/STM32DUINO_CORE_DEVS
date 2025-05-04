@@ -1,0 +1,42 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m0plus",
+    "extra_flags": "-DSTM32G0xx -DSTM32G0B1xx",
+    "f_cpu": "64000000L",
+	"framework_extra_flags": {
+      "arduino": "-D__CORTEX_SC=0"
+    },
+    "mcu": "stm32g071k8u6",
+    "product_line": "STM32G071xx",
+    "variant": "STM32G0xx/G071K(6-8-B)(T-U)_G081KB(T-U)"
+  },
+  "debug": {
+    "jlink_device": "STM32G071C8",
+    "openocd_target": "stm32g0x",
+    "svd_path": "STM32G071.svd"
+  },
+  "frameworks": [
+    "arduino",
+    "cmsis",
+    "libopencm3",
+    "stm32cube"
+  ],
+  "name": "STM32G071C8 (36k RAM. 64k Flash)",
+  "upload": {
+    "disable_flushing": false,
+    "maximum_ram_size": 36864,
+    "maximum_size": 65535 ,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic",
+      "serial",
+      "dfu"
+    ]
+  },
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g071k8.html",
+  "vendor": "Generic"
+}
