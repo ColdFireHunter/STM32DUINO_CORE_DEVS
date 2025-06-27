@@ -4,7 +4,7 @@
     "cpu": "cortex-m0",
     "extra_flags": "-DSTM32G030xx -DSTM32G0xx",
     "f_cpu": "64000000L",
-    "mcu": "stm32G031J6M6",
+    "mcu": "stm32G030C8T6",
     "product_line": "STM32G030xx",
     "variant": "STM32G0xx/G030C(6-8)T"
   },
