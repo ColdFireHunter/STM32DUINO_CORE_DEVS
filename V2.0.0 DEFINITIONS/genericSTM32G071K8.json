@@ -12,7 +12,7 @@
     "variant": "STM32G0xx/G071K(6-8-B)(T-U)_G081KB(T-U)"
   },
   "debug": {
-    "jlink_device": "STM32G071C8",
+    "jlink_device": "STM32G071K8",
     "openocd_target": "stm32g0x",
     "svd_path": "STM32G071.svd"
   },
@@ -22,7 +22,7 @@
     "libopencm3",
     "stm32cube"
   ],
-  "name": "STM32G071C8 (36k RAM. 64k Flash)",
+  "name": "STM32G071K8 (36k RAM. 64k Flash)",
   "upload": {
     "disable_flushing": false,
     "maximum_ram_size": 36864,
