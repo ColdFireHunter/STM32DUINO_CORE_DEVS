@@ -2,17 +2,17 @@
   "build": {
     "core": "stm32",
     "cpu": "cortex-m0plus",
-    "extra_flags": "-DSTM32G0xx -DSTM32G0B0xx",
+    "extra_flags": "-DSTM32G0 -DSTM32G0xx -DSTM32G0B0xx",
     "f_cpu": "64000000L",
 	"framework_extra_flags": {
       "arduino": "-D__CORTEX_SC=0"
     },
-    "mcu": "stm32g0b0cet6",
+    "mcu": "stm32g0b0vet6",
     "product_line": "STM32G0B0xx",
-    "variant": "STM32G0xx/G0B0CET"
+    "variant": "STM32G0xx/G0B0VET"
   },
   "debug": {
-    "jlink_device": "STM32G0B0CE",
+    "jlink_device": "STM32G0B0VE",
     "openocd_target": "stm32g0x",
     "svd_path": "STM32G0B0.svd"
   },
@@ -22,7 +22,7 @@
     "libopencm3",
     "stm32cube"
   ],
-  "name": "STM32G0B0CE (144k RAM. 512k Flash)",
+  "name": "STM32G0B0VE (144k RAM. 512k Flash)",
   "upload": {
     "disable_flushing": false,
     "maximum_ram_size": 147456,
@@ -35,8 +35,11 @@
       "blackmagic",
       "serial",
       "dfu"
-    ]
+    ],
+    "require_upload_port": true,
+    "use_1200bps_touch": false,
+    "wait_for_upload_port": false
   },
-  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g0b0ce.html",
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g0b0ve.html",
   "vendor": "Generic"
 }
